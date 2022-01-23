@@ -1,0 +1,32 @@
+name: Integração Contínua
+
+on:
+  pull_request:
+    branches:
+      - main
+
+  push:
+    
+jobs:
+  executar_linter:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Realiza o checkout
+        uses: actions/checkout@v2
+
+      - name: Instala o Python 3.10
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.10
+
+      - name: Instala o pip3
+        uses: logikal-code/pip-install@v1
+
+      - name: Instala as dependências
+        run: pip3 install -r requirements.txt
+
+      - name: Executa o black
+        run: black --check app
+
+      - name: Executa os testes unitários
+        run: pytest -v 
