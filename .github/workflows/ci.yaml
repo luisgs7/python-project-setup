@@ -14,10 +14,10 @@ jobs:
       - name: Realiza o checkout
         uses: actions/checkout@v2
 
-      - name: Instala o Python 3.10
+      - name: Instala o Python 3.8
         uses: actions/setup-python@v2
         with:
-          python-version: 3.10
+          python-version: 3.8
 
       - name: Instala o pip3 e dependencias
         uses: luisgs7/pip3-packages@v1
