@@ -34,3 +34,7 @@
  - pre-commit install 
  - criar o arquivo .pre-commit-config.yaml
  - adicionar as configurações no arquivo
+
+11 - Ao clonar este repositório basta criar o ambiente virtual, e em seguida executar o comando abaixo, na pasta do projeto.
+
+ - venv/bin/pip3 install -r requirements.txt
