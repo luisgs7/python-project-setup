@@ -19,8 +19,8 @@ jobs:
         with:
           python-version: 3.10
 
-      - name: Instala o pip3
-        uses: sudo apt install pip3 -y
+      - name: Instala o pip3 e dependencias
+        uses: luisgs7/pip3-packages@v1
 
       - name: Instala as dependências
         run: pip3 install -r requirements.txt
