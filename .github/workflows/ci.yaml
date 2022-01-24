@@ -19,14 +19,11 @@ jobs:
         with:
           python-version: 3.8
 
-      - name: Instala o pip3 e dependencias
-        uses: luisgs7/pip3-packages@v1.0.11
-
-      - name: Instala as dependências
-        run: pip3 install -r requirements.txt
-
+      - name: Install pip and dependencies
+        uses: luisgs7/pip-packages@v1
+        
       - name: Executa o black
         run: black --check app
 
       - name: Executa os testes unitários
-        run: pytest -v 
+        run: pytest 
